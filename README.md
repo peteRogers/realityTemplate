@@ -36,3 +36,4 @@ To play a sound coming from an entity follow this code. Make sure you gegt or cr
           print("Error loading audio file")
         }
 ```
+Further reading [here](https://ethansaadia.medium.com/immersive-audio-in-realitykit-b3748c0a4319)
