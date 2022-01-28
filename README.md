@@ -55,8 +55,10 @@ Further reading [here](https://ethansaadia.medium.com/immersive-audio-in-reality
         entity.transform.translation = simd_make_float3(0, 0, -0.3)
         anchor.addChild(entity)
 ```
-## code to create a function that runs before every screen update (frame) super useful for doing animation etc
+## code to create a function that runs before every screen update (frame)
+super useful for doing animation etc
 ```swift
+ var eventSubscription: Cancellable!
  eventSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { _ in
             //*** ADD CODE THAT RUNS EVERY FRAME - SUPER PRECISE
         }
