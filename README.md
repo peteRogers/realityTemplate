@@ -26,19 +26,12 @@ You can create notifications from Reality Composer that can be picked up by your
 make sure you change 'notificationName' to the name of the notification you created in Reality Composer.
 
 ## code to play spatial audio from an entity
-To play a sound coming from an entity follow this code
+To play a sound coming from an entity follow this code. Make sure you gegt or create an entity to add the file in it is called myEntity in this code.
 ```swift
-        let audioFilePath = "path/to/audio/file"
-        let entity = Entity()
-
+        
         do {
-          let resource = try AudioFileResource.load(named: audioFilePath, in: nil, inputMode: .spatial, loadingStrategy: .preload, shouldLoop: true)
-
-          let audioController = entity.prepareAudio(resource)
-          audioController.play()
-
-          // If you want to start playing right away, you can replace lines 7-8 with line 11 below
-          // let audioController = entity.playAudio(resource) 
+          let resource = try AudioFileResource.load(named: "audioFileName", in: nil, inputMode: .spatial, loadingStrategy: .preload, shouldLoop: true)
+          let audioController = myEntity.playAudio(resource) 
         } catch {
           print("Error loading audio file")
         }
