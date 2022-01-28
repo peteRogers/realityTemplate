@@ -63,3 +63,11 @@ super useful for doing animation etc
             //*** ADD CODE THAT RUNS EVERY FRAME - SUPER PRECISE
         }
 ```
+## code to load just the animation from a usdz file
+This code allows you to load the animation of one usdz file so that you can apply it to another usdz file. This allows you to then have a model that can play multiple animations for example a walk cycle, idle cycle etc. This is kind of a work around until RealityKit allows usdz files to have multiple animations in one file. 
+```swift
+        // loads animation and sets it to repeat (loop)
+        let myAnimation = try? Entity.load(named: "usdzName").availableAnimations.first!.repeat()
+        // play animation on current entity... The animation has to be the same structure e.g. the named same bone system 
+        entity.playAnimation(myAnimation!, transitionDuration: 0, blendLayerOffset: 0, separateAnimatedValue: false, startsPaused: false)
+```
