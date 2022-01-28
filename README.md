@@ -49,12 +49,9 @@ Further reading [here](https://ethansaadia.medium.com/immersive-audio-in-reality
             print("usdz not loading error")
         }
         
-       
-        let entityAnchor = AnchorEntity(world: .zero)
-        arView.scene.addAnchor(entityAnchor)
         //sort size of model
         entity.transform.scale *= 0.3
-        //set poistion of model x, y, z
+        //set position of model x, y, z
         entity.transform.translation = simd_make_float3(0, 0, -0.3)
-        entityAnchor.addChild(entity)
+        anchor.addChild(entity)
 ```
