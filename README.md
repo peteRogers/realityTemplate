@@ -37,3 +37,24 @@ To play a sound coming from an entity follow this code. Make sure you gegt or cr
         }
 ```
 Further reading [here](https://ethansaadia.medium.com/immersive-audio-in-realitykit-b3748c0a4319)
+
+## code to load a USDZ model as an entity
+```swift
+        var entity:Entity!
+        do{
+            entity = try Entity.load(named: "USDZName")
+            //uncomment if you want to do collisions or taps etc
+            //entity.generateCollisionShapes(recursive: true)
+        }catch{
+            print("usdz not loading error")
+        }
+        
+       
+        let entityAnchor = AnchorEntity(world: .zero)
+        arView.scene.addAnchor(entityAnchor)
+        //sort size of model
+        entity.transform.scale *= 0.3
+        //set poistion of model x, y, z
+        entity.transform.translation = simd_make_float3(0, 0, -0.3)
+        entityAnchor.addChild(entity)
+```
