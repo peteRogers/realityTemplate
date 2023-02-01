@@ -15,10 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        //load scene from reality composure
+        let sceneAnchor = try! Experience.loadScene()
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        // Add the scene anchor to the scene
+        arView.scene.anchors.append(sceneAnchor)
+        
+       
+//        sceneAnchor.actions.hitCube.onAction = {entity in
+//            print("hit")
+//            //sceneAnchor.notifications.hitCube.post()
+//        }
     }
 }

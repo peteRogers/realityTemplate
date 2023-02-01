@@ -1,3 +1,12 @@
 [
-
+  {
+    "libraryIdentifier" : "2cb5774fbc369772917bfcb82ac80db3",
+    "format" : "model",
+    "displayName" : "SPARROW_ANIMATIONS.usdz"
+  },
+  {
+    "libraryIdentifier" : "d4799865be493061ca188275f864c82e",
+    "format" : "model",
+    "displayName" : "White_Eagle_Fly.usdz"
+  }
 ]

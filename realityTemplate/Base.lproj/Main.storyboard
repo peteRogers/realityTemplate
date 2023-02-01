@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,22 +12,22 @@
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="realityTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHZ-LN-XoH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaa-X7-xZT" userLabel="ARView" propertyAccessControl="all">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </arView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fr-w8-Ecp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
+                                    <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaa-X7-xZT" userLabel="ARView" propertyAccessControl="all">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </arView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BvT-dE-b4h">
                                         <rect key="frame" x="20" y="796" width="374" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-d1-a8F">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-d1-a8F">
                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="80"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                             </button>
@@ -56,13 +57,9 @@
                         <viewLayoutGuide key="safeArea" id="JDy-bU-6UK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xaa-X7-xZT" firstAttribute="top" secondItem="iHZ-LN-XoH" secondAttribute="top" id="Bve-Lp-ESN"/>
-                            <constraint firstItem="xaa-X7-xZT" firstAttribute="leading" secondItem="JDy-bU-6UK" secondAttribute="leading" id="JMa-ou-jHc"/>
-                            <constraint firstItem="xaa-X7-xZT" firstAttribute="width" secondItem="iHZ-LN-XoH" secondAttribute="width" id="NLF-jn-riw"/>
+                            <constraint firstItem="0fr-w8-Ecp" firstAttribute="top" secondItem="iHZ-LN-XoH" secondAttribute="top" id="DHD-uQ-lYf"/>
                             <constraint firstItem="0fr-w8-Ecp" firstAttribute="height" secondItem="iHZ-LN-XoH" secondAttribute="height" id="RON-P5-iJG"/>
-                            <constraint firstItem="0fr-w8-Ecp" firstAttribute="top" secondItem="xaa-X7-xZT" secondAttribute="top" id="br1-wW-LTE"/>
                             <constraint firstItem="0fr-w8-Ecp" firstAttribute="width" secondItem="iHZ-LN-XoH" secondAttribute="width" id="kWh-45-yuv"/>
-                            <constraint firstItem="xaa-X7-xZT" firstAttribute="height" secondItem="iHZ-LN-XoH" secondAttribute="height" id="q7F-1S-kGC"/>
                             <constraint firstItem="0fr-w8-Ecp" firstAttribute="leading" secondItem="JDy-bU-6UK" secondAttribute="leading" id="z5L-hA-uHf"/>
                         </constraints>
                     </view>
@@ -70,6 +67,7 @@
                         <outlet property="arView" destination="xaa-X7-xZT" id="7SB-OR-KoV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
